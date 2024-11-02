@@ -1,0 +1,83 @@
+:root {
+  --ngx-page-skeleton_header-height: 48px;
+  /* --ngx-page-skeleton_sidebar-width: 320px; is set by component input */
+  --ngx-page-skeleton_sidebar_border-width: 1px;
+  --ngx-page-skeleton_transition-timing-function: ease-in-out;
+  --ngx-page-skeleton_transition-duration: 0.3s;
+}
+
+body {
+  margin: 0;
+}
+
+ngx-page-skeleton {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.ngx-page-skeleton_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--ngx-page-skeleton_header-height);
+}
+
+.ngx-page-skeleton_sidebar {
+  position: fixed;
+  top: var(--ngx-page-skeleton_header-height);
+  bottom: 0;
+  left: 0;
+  width: var(--ngx-page-skeleton_sidebar-width);
+  transform: translateX(-100%);
+
+  &[open] {
+    transform: translateX(0);
+  }
+}
+
+.ngx-page-skeleton_sidebar_border {
+  position: absolute;
+  top: var(--ngx-page-skeleton_header-height);
+  bottom: 0;
+  left: 0;
+  width: var(--ngx-page-skeleton_sidebar_border-width);
+  transform: translateX(-100%);
+
+  &:not([disabled]) {
+    cursor: ew-resize;
+    z-index: 1;
+  }
+}
+.ngx-page-skeleton_sidebar[open] + .ngx-page-skeleton_sidebar_border {
+  left: var(--ngx-page-skeleton_sidebar-width);
+  transform: translateX(0);
+}
+
+.ngx-page-skeleton_content {
+  position: fixed;
+  top: var(--ngx-page-skeleton_header-height);
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  
+  &:has(~ .ngx-page-skeleton_sidebar[open]) {
+    width: calc(100vw - var(--ngx-page-skeleton_sidebar-width) - var(--ngx-page-skeleton_sidebar_border-width));
+  }
+}
+
+ngx-page-skeleton[animated]:not([dragging]) {
+  .ngx-page-skeleton_sidebar {
+    transition: transform var(--ngx-page-skeleton_transition-duration) var(--ngx-page-skeleton_transition-timing-function);
+  }
+
+  .ngx-page-skeleton_sidebar_border {
+    transition: left var(--ngx-page-skeleton_transition-duration) var(--ngx-page-skeleton_transition-timing-function), transform var(--ngx-page-skeleton_transition-duration) var(--ngx-page-skeleton_transition-timing-function);
+  }
+
+  .ngx-page-skeleton_content {
+    transition: width var(--ngx-page-skeleton_transition-duration) var(--ngx-page-skeleton_transition-timing-function);
+  }
+}

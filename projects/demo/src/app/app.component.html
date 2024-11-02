@@ -1,0 +1,48 @@
+<ngx-page-skeleton [(sidebarWidthInPx)]="sidebarWidth" [isSidebarOpen]="isSidebarOpen()" animated>
+  <section
+    ngxpageskeleton_header
+    style="
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(2, 6, 23);
+      box-sizing: border-box;
+    "
+  >
+    <button style="margin-left: 8px;" (click)="isSidebarOpen.set(!isSidebarOpen())">Toggle sidebar</button>
+    <div style="color: whitesmoke; font-size: 24px; margin-left: 16px;">&#64;shaman-apprentice/ngx-page-skeleton</div>
+  </section>
+
+  <section
+    ngxpageskeleton_sidebar
+    style="height: 100%; background-color: rgb(241, 243, 245); padding: 8px;"
+  >
+    Sidebar
+  </section>
+  <section ngxpageskeleton_sidebar_border
+    style="
+      display: flex;
+      align-items: center;
+      height: 100%;
+      background-color: black;
+    "
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40px" height="40px"
+      viewBox="0 0 24 24"
+      fill="none"
+      style="transform: translateX(-50%);"
+      [style.overflow]="isSidebarOpen() ? 'visible' : 'hidden'"
+    >
+    <path d="M8 5V19M16 5V19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </section>
+  
+  <section
+    ngxpageskeleton_content
+    style="height: 100%; background-color: rgb(248, 250, 252); padding: 8px;"
+  >
+    Content
+  </section>
+</ngx-page-skeleton>

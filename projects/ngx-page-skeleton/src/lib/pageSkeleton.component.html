@@ -1,0 +1,22 @@
+<section class="ngx-page-skeleton_header">
+  <ng-content select="[ngxpageskeleton_header]"></ng-content>
+</section>
+
+<section class="ngx-page-skeleton_content">
+  <ng-content select="[ngxpageskeleton_content]"></ng-content>
+</section>
+
+<section class="ngx-page-skeleton_sidebar" [attr.open]="isSidebarOpen() ? '' : null">
+  <ng-content select="[ngxpageskeleton_sidebar]"></ng-content>
+</section>
+<section class="ngx-page-skeleton_sidebar_border"
+  [attr.disabled]="disableDragging() ? '' : null"
+  cdkDrag
+  cdkDragLockAxis="x"
+  (cdkDragStarted)="handleSidebarResizeStart()"
+  (cdkDragMoved)="handleSidebarResize($event)"
+  (cdkDragEnded)="handleSidebarResizeEnd($event)"
+  [cdkDragDisabled]="disableDragging()"
+>
+  <ng-content select="[ngxpageskeleton_sidebar_border]"></ng-content>
+</section>

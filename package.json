@@ -1,0 +1,34 @@
+{
+  "name": "ngx-page-skeleton",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve demo",
+    "build": "ng build @shaman-apprentice/ngx-page-skeleton",
+    "watch": "ng build @shaman-apprentice/ngx-page-skeleton --watch --configuration development",
+    "test": "echo \"No tests\"",
+    "publish": "npm run build && npm publish ./dist/ngx-page-skeleton --access=public"
+  },
+  "private": false,
+  "dependencies": {
+    "@angular/animations": "^18.2.0",
+    "@angular/cdk": "^18.2.0",
+    "@angular/common": "^18.2.0",
+    "@angular/compiler": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "@angular/forms": "^18.2.0",
+    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser-dynamic": "^18.2.0",
+    "@angular/router": "^18.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.10"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.11",
+    "@angular/cli": "^18.2.11",
+    "@angular/compiler-cli": "^18.2.0",
+    "ng-packagr": "^18.2.0",
+    "typescript": "~5.5.2"
+  }
+}

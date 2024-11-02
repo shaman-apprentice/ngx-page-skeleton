@@ -1,0 +1,17 @@
+{
+  "name": "@shaman-apprentice/ngx-page-skeleton",
+  "version": "0.1.0",
+  "author": "shaman-apprentice",
+  "private": false,
+  "license": "MIT",
+  "description": "An Angular page container providing slots for header, sidebar and content.",
+  "peerDependencies": {
+    "@angular/common": "^18.2.0",
+    "@angular/cdk": "^18.2.11",
+    "@angular/core": "^18.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
