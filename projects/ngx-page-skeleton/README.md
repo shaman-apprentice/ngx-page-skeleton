@@ -1,24 +1,46 @@
-# NgxPageSkeleton
+# ngx-page-skeleton
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+An Angular page container providing slots for header, sidebar and content.
 
-## Code scaffolding
+![example image](https://raw.githubusercontent.com/shaman-apprentice/ngx-page-skeleton/refs/tags/v0.1.0/docs/demo.excalidraw.png)
 
-Run `ng generate component component-name --project ngx-page-skeleton` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-page-skeleton`.
-> Note: Don't forget to add `--project ngx-page-skeleton` or else it will be added to the default project in your `angular.json` file. 
+## How to use
 
-## Build
+```bash
+npm install @shaman-apprentice/ngx-page-skeleton
+```
 
-Run `ng build ngx-page-skeleton` to build the project. The build artifacts will be stored in the `dist/` directory.
+See [demo app](https://github.com/shaman-apprentice/ngx-page-skeleton/tree/main/projects/demo/src/app) for example usage.
 
-## Publishing
+### Slots of `ngx-page-skeleton`
 
-After building your library with `ng build ngx-page-skeleton`, go to the dist folder `cd dist/ngx-page-skeleton` and run `npm publish`.
+| select |
+| --- |
+| `[ngxpageskeleton_header]` |
+| `[ngxpageskeleton_sidebar]` |
+| `[ngxpageskeleton_sidebar_border]` |
+| `[ngxpageskeleton_sidebar_content]` |
 
-## Running unit tests
+### Inputs of `ngx-page-skeleton`
 
-Run `ng test ngx-page-skeleton` to execute the unit tests via [Karma](https://karma-runner.github.io).
+| name | type | default |
+| --- | --- | --- |
+| `disableDragging` | `input<boolean>` | `false` |
+| `isSidebarOpen` | `input<boolean>` | `false` |
+| `sidebarMinWidthInPx` | `input<number>` | `240` |
+| `sidebarWidthInPx` | `model<number>` | `320` |
 
-## Further help
+### CSS variables
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| name | default |
+| --- | --- |
+| `--ngx-page-skeleton_header-height` | `48px` |
+| `--ngx-page-skeleton_sidebar_border-width` | `1px` |
+| `--ngx-page-skeleton_transition-duration` | `0.3s` |
+| `--ngx-page-skeleton_transition-timing-function` | `ease-in-out` |
+
+### HTML attributes of `ngx-page-skeleton`
+
+| name | description |
+| --- | --- |
+| `animated` | Opening / closing of sidebar will have a slide animation. Can be customized with css variables.

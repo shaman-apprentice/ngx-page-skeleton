@@ -3,5 +3,6 @@
   "dest": "../../dist/ngx-page-skeleton",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["./docs"]
 }
