@@ -4,7 +4,6 @@ import { NgxPageSkeletonComponent } from "@shaman-apprentice/ngx-page-skeleton";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     RouterOutlet,
     NgxPageSkeletonComponent,

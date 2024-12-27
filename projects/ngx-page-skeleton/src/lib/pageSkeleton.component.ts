@@ -8,7 +8,6 @@ import { DOCUMENT } from "@angular/common";
   styleUrl: "pageSkeleton.component.css",
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   host: {
     "[attr.dragging]": `isDragging() ? '' : null`
   },
