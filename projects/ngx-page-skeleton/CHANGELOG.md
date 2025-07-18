@@ -4,6 +4,12 @@ This changelog is roughly based on [Keep a Changelog](http://keepachangelog.com/
 
 ## [unreleased] (Breaking 🐱 | Feat 🚀 | Fixed 🐞)
 
+## [1.0.0] 2025-07-18
+
+### Breaking 🐱
+
+- Require Angular v20
+
 ## [0.2.0] 2024-12-27
 
 ### Breaking 🐱

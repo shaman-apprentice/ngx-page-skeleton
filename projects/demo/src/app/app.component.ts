@@ -1,11 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NgxPageSkeletonComponent } from "@shaman-apprentice/ngx-page-skeleton";
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     NgxPageSkeletonComponent,
   ],
   templateUrl: './app.component.html',

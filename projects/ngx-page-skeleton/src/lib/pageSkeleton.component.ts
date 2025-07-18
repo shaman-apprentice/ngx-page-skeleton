@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, model, signal, untracked, ViewEncapsulation } from "@angular/core";
+import { ChangeDetectionStrategy, Component, effect, inject, input, model, signal, untracked, ViewEncapsulation, DOCUMENT } from "@angular/core";
 import {CdkDragEnd, CdkDragMove, DragDropModule} from '@angular/cdk/drag-drop';
-import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: "ngx-page-skeleton",
