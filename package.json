@@ -7,8 +7,7 @@
     "build": "ng build @shaman-apprentice/ngx-page-skeleton",
     "watch": "ng build @shaman-apprentice/ngx-page-skeleton --watch --configuration development",
     "test": "echo \"No tests\"",
-    "prepare": "npm run build",
-    "publish": "npm publish ./dist/ngx-page-skeleton --access=public"
+    "publishLib": "npm run build && npm publish ./dist/ngx-page-skeleton --access=public"
   },
   "private": false,
   "dependencies": {
